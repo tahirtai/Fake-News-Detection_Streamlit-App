@@ -1,5 +1,5 @@
 # fake_news_detector.py
-# Real
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -21,9 +21,14 @@ LABEL_ENCODER_FILE = "label_encoder.pkl"
 TRAIN_FILE = "train.csv"
 
 # ------------------ Download NLTK Stopwords ------------------
-# nltk.download('stopwords')
-from nltk.corpus import stopwords
-stop_words = set(stopwords.words("english"))
+# Robust handling for Render deployment
+try:
+    from nltk.corpus import stopwords
+    stop_words = set(stopwords.words("english"))
+except LookupError:
+    nltk.download("stopwords")
+    from nltk.corpus import stopwords
+    stop_words = set(stopwords.words("english"))
 
 # ------------------ Text Preprocessing ------------------
 def clean_text(text):
