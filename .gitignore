@@ -1,1 +1,17 @@
 venv
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Streamlit cache
+.streamli
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+
+Fake.csv
+True.csv
+train.csv
