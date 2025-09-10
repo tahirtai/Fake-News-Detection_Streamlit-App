@@ -21,7 +21,7 @@ LABEL_ENCODER_FILE = "label_encoder.pkl"
 TRAIN_FILE = "train.csv"
 
 # ------------------ Download NLTK Stopwords ------------------
-nltk.download('stopwords')
+# nltk.download('stopwords')
 from nltk.corpus import stopwords
 stop_words = set(stopwords.words("english"))
 
