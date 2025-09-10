@@ -1,5 +1,5 @@
 # fake_news_detector.py
-
+# Real
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -56,7 +56,7 @@ def predict_news(text, model, vectorizer, encoder):
 def main():
     st.set_page_config(page_title="Fake News Detector", layout="centered")
     st.title(" Fake News Detector")
-    st.markdown("Use Machine Learning to detect **Fake News** from headlines.")
+    st.markdown("Detect whether a news headline is REAL or FAKE.")
 
     model, vectorizer, encoder = load_model()
 
